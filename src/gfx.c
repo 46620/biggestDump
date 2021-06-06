@@ -57,7 +57,7 @@ bool graphicsInit(int windowWidth, int windowHeight)
 
     framebufferCreate(&fb, window, windowWidth, windowHeight, PIXEL_FORMAT_RGBA_8888, 2);
     framebufferMakeLinear(&fb);
-    plInitialize();
+    plInitialize(PlServiceType_User);
 
     //Make a fake tex that points to framebuffer
     frameBuffer = malloc(sizeof(tex));
